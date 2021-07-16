@@ -30,12 +30,14 @@ app.use(
   })
 );
 
+const PORT = process.env.PORT || 9000;
+
 mongoose
   .connect(
     `mongodb+srv://akash:${process.env.MONGO_PASSWORD}@cluster0.dqpor.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`
   )
   .then(() => {
-    app.listen(9000, () => {
+    app.listen(PORT, () => {
       console.log("Server Running");
     });
   })
