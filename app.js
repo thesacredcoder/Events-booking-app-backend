@@ -34,7 +34,8 @@ const PORT = process.env.PORT || 9000;
 
 mongoose
   .connect(
-    `mongodb+srv://akash:${process.env.MONGO_PASSWORD}@cluster0.dqpor.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`
+    // `mongodb+srv://akash:${process.env.MONGO_PASSWORD}@cluster0.dqpor.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`
+    `mongodb+srv://akash:event123456@cluster0.dqpor.mongodb.net/events-app?retryWrites=true&w=majority`
   )
   .then(() => {
     app.listen(PORT, () => {
